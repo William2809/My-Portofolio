@@ -3,7 +3,7 @@ import { SiGithub, SiLinkedin, SiWhatsapp } from 'react-icons/si'
 
 function Footer() {
     return (
-        <div className="flex flex-col justify-center items-center h-[200px] ">
+        <div className="flex flex-col justify-center items-center h-[200px]">
             <div className="text-white text-24 lg:text-32 font-bold">
                 Let's Create Awesome Things.
             </div>

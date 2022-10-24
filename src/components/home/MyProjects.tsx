@@ -4,6 +4,7 @@ import { SiExpress, SiFigma, SiGithub, SiLaravel, SiMongodb, SiMysql, SiNodedotj
 import weeblistv2 from '../../assets/weeblistv2-preview.svg'
 import linkco from '../../assets/link-co-preview.svg'
 import weeblist from '../../assets/weeblist-preview.svg'
+import { Link } from 'react-router-dom'
 
 function MyProjects() {
     return (
@@ -16,12 +17,12 @@ function MyProjects() {
                     <div>
                         <div className="p-3 relative flex bg-base rounded-2xl ">
                             <img className="rounded-lg w-full group-hover:opacity-0 duration-300" src={weeblistv2} alt="weeblistv2" />
-                            <div className="absolute top-0 left-0 flex w-full h-full justify-center items-center opacity-0 group-hover:opacity-100 group-hover:text-white duration-300 text-24">
+                            <div className="absolute top-0 left-0 flex w-full h-full justify-center items-center opacity-0 group-hover:opacity-100 group-hover:text-white duration-300 text-16">
                                 <div>
                                     <div className="font-bold text-center">
                                         Made with
                                     </div>
-                                    <div className="font-medium mt-3 md:flex md:flex-col md:gap-3">
+                                    <div className="font-medium md:mt-3 md:flex md:flex-col md:gap-3">
                                         <div className="flex items-center gap-2">
                                             <SiMongodb size="32px" />
                                             <div>
@@ -60,7 +61,7 @@ function MyProjects() {
                                         </div>
                                     </div>
                                     <a href="https://github.com/William2809/weeb-list-v2" target="_blank">
-                                        <div className="mt-5 flex font-normal gap-2 items-center">
+                                        <div className="mt-2 md:mt-5 flex font-normal gap-2 items-center">
                                             <SiGithub size="28px" className="text-primary-100" />
                                             <div className="underline text-primary-100 text-18 ">Github Repositories</div>
                                         </div>
@@ -83,7 +84,7 @@ function MyProjects() {
                         </div>
                     </div>
                 </a>
-                <a className="group w-full  min-w-[360px] max-w-[600px]" href="#">
+                <Link to="/" className="group w-full  min-w-[360px] max-w-[600px]">
                     <div>
                         <div className="p-3 relative flex bg-base rounded-2xl ">
                             <img className="rounded-lg w-full group-hover:opacity-0 duration-300" src={linkco} alt="weeblistv2" />
@@ -141,8 +142,8 @@ function MyProjects() {
                             </div>
                         </div>
                     </div>
-                </a>
-                <a className="group w-full  min-w-[360px] max-w-[600px]" href="#">
+                </Link>
+                <Link to="/" className="group w-full  min-w-[360px] max-w-[600px]">
                     <div>
                         <div className="p-3 relative flex bg-base rounded-2xl ">
                             <img className="rounded-lg w-full group-hover:opacity-0 duration-300" src={weeblist} alt="weeblistv2" />
@@ -176,7 +177,7 @@ function MyProjects() {
                             </div>
                         </div>
                     </div>
-                </a>
+                </Link>
 
             </div>
         </div>

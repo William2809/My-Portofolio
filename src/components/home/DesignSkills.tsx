@@ -18,8 +18,7 @@ function DesignSkills() {
             </div>
             <div className="flex gap-4 mt-2">
 
-
-                <div className={` flex p-2 items-center h-[40px] bg-primary-200 rounded-lg cursor-pointer`} onMouseEnter={() => mouseEnter("SiFigma")} onMouseLeave={mouseLeave}>
+                <div className={` flex p-2 items-center h-[40px] bg-primary-200 rounded-lg lg:cursor-pointer`} onMouseEnter={() => mouseEnter("SiFigma")} onMouseLeave={mouseLeave}>
                     <SiFigma size="24px" className={`text-white ${skillActive === "SiFigma" ? "animate-pulse" : ""}`} />
 
                     <div className={` text-white duration-200 ${skillActive === "SiFigma" ? "w-[60px] pl-2 " : "w-0 -z-10 "}`}>
@@ -29,7 +28,7 @@ function DesignSkills() {
                     </div>
                 </div>
 
-                <div className={`z-10 flex p-2 items-center h-[40px] bg-primary-200 rounded-lg cursor-pointer`} onMouseEnter={() => mouseEnter("SiMiro")} onMouseLeave={mouseLeave}>
+                <div className={`z-10 flex p-2 items-center h-[40px] bg-primary-200 rounded-lg lg:cursor-pointer`} onMouseEnter={() => mouseEnter("SiMiro")} onMouseLeave={mouseLeave}>
                     <SiMiro size="24px" className={`text-white ${skillActive === "SiMiro" ? "animate-pulse" : ""}`} />
 
                     <div className={`text-white duration-200 ${skillActive === "SiMiro" ? "w-[52px] pl-2 " : "w-0 "}`}>

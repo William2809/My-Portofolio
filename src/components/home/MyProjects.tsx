@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 function MyProjects() {
     return (
-        <div className="mt-[100px]">
+        <div className="pt-[100px]">
             <div className="text-white text-32 font-bold">
                 Some of My Projects
             </div>

@@ -8,7 +8,7 @@ function MyServices() {
 
     return (
         <div>
-            {width < 768 && <div className="mt-[100px]">
+            {width < 768 && <div className="pt-[100px]">
                 <div className="text-white text-32 font-bold">
                     My Services
                 </div>
@@ -57,7 +57,7 @@ function MyServices() {
 
 
 
-            {width >= 768 && <div className="mt-[100px]">
+            {width >= 768 && <div className="pt-[100px]">
                 <div className="text-white text-32 font-bold">
                     My Services
                 </div>

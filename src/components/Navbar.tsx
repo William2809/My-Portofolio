@@ -12,9 +12,10 @@ function Navbar({ children }: any) {
             </div>
             {width > 640 &&
                 (<div className="flex gap-3 text-white">
-                    <Link className="text-16 flex justify-center items-center h-[40px] w-[110px] rounded-xl hover:bg-primary-200 duration-200" to="about">About</Link>
-                    <Link className="text-16 flex justify-center items-center h-[40px] w-[110px] rounded-xl hover:bg-primary-200 duration-200" to="about">Work</Link>
-                    <Link className="text-16 flex justify-center items-center h-[40px] w-[110px] rounded-xl bg-primary-100 hover:bg-primary-200 duration-200" to="about">Contact</Link>
+                    <a className="text-16 flex justify-center items-center h-[40px] w-[110px] rounded-xl hover:bg-primary-200 duration-200" href="#about">About</a>
+                    <a className="text-16 flex justify-center items-center h-[40px] w-[110px] rounded-xl hover:bg-primary-200 duration-200" href="#skills">Skills</a>
+                    <a className="text-16 flex justify-center items-center h-[40px] w-[110px] rounded-xl hover:bg-primary-200 duration-200" href="#work">Work</a>
+                    <a className="text-16 flex justify-center items-center h-[40px] w-[110px] rounded-xl bg-primary-100 hover:bg-primary-200 duration-200" href="mailto:william28.office@gmail.com?subject=Work request" target="_blank">Contact</a>
                 </div>)
             }
             {width <= 640 &&

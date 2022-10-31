@@ -26,7 +26,7 @@ function Home() {
     return (
         <div >
             {/* Section 1 */}
-            <div className={`mt-2 sm:mt-[40px] w-full md:flex md:flex-row-reverse md:justify-between items-center`}>
+            <div id="about" className={`pt-2 sm:pt-[40px] w-full md:flex md:flex-row-reverse md:justify-between items-center`}>
                 <div>
                     <div className={`${width > 640 ? "flex justify-center" : ""}`}>
 
@@ -123,7 +123,7 @@ function Home() {
             <MyServices />
 
             {/* section 3 */}
-            <div className="mt-[100px]">
+            <div id="skills" className="pt-[100px]">
                 <div className="text-white text-32 font-bold">
                     My Skills
                 </div>
@@ -148,7 +148,9 @@ function Home() {
 
 
             {/* Section 4 */}
-            <MyProjects />
+            <div id="work">
+                <MyProjects />
+            </div>
 
         </div>
     )

@@ -1,29 +1,53 @@
-import { MdMenu } from "react-icons/md";
+import { useEffect, useState } from "react";
+import { MdClose, MdMenu } from "react-icons/md";
 import { Link } from "react-router-dom"
 import useWindowDimensions from "../hooks/useWindowDimensions"
 
 function Navbar({ children }: any) {
     const { height, width } = useWindowDimensions();
+    const [openNav, setOpenNav] = useState(false);
+
+    const navLink = [
+        { text: "Services", link: "#services" },
+        { text: "Skills", link: "#skills" },
+        { text: "work", link: "#work" },
+    ]
+
+    const resetNav = () => {
+        setOpenNav(false);
+    }
+
+    // useEffect(() => {
+    //   if(width >= 640 && openNav){
+
+    //   }
+    //   return () => {
+
+    //   }
+    // }, [width])
+
+    if (width >= 640 && openNav) {
+        resetNav();
+    }
+
     return (
-        <div className="flex justify-between items-center h-[80px]">
 
-            <div className="text-white font-bold text-20 ">
-                WH.
+        <div className={`flex items-center justify-between h-[80px] bg-background-100 relative`}>
+            <div className="text-white font-bold text-20 ml-[20px]">
+                <a href="#about" onClick={resetNav}>WH.</a>
             </div>
-            {width > 640 &&
-                (<div className="flex gap-3 text-white">
-                    <a className="text-16 flex justify-center items-center h-[40px] w-[110px] rounded-xl hover:bg-primary-200 duration-200" href="#about">About</a>
-                    <a className="text-16 flex justify-center items-center h-[40px] w-[110px] rounded-xl hover:bg-primary-200 duration-200" href="#skills">Skills</a>
-                    <a className="text-16 flex justify-center items-center h-[40px] w-[110px] rounded-xl hover:bg-primary-200 duration-200" href="#work">Work</a>
-                    <a className="text-16 flex justify-center items-center h-[40px] w-[110px] rounded-xl bg-primary-100 hover:bg-primary-200 duration-200" href="mailto:william28.office@gmail.com?subject=Work request" target="_blank">Contact</a>
-                </div>)
+            <div className={`absolute sm:static sm:flex gap-3 -z-10 sm:z-0 w-full sm:w-max h-max  text-white transition-all ease-in duration-500  ${openNav ? "top-[80px]  bg-base " : "top-[-400px]"}`}>
+                {navLink.map((navItem: any, index) => (
+                    <a key={index} className="text-16 flex pl-5 sm:pl-0  sm:justify-center items-center h-[40px] w-full sm:w-[110px] sm:rounded-xl hover:bg-primary-200 duration-200" href={navItem.link} onClick={resetNav}>{navItem.text}</a>
+                ))}
+                <a className="text-16 text-primary-100 sm:text-white flex pl-5 sm:pl-0 sm:justify-center items-center h-[40px] w-full sm:w-[110px] sm:rounded-xl sm:bg-primary-100 hover:text-white hover:bg-primary-100 sm:hover:bg-primary-200 duration-200" href="mailto:william28.office@gmail.com?subject=Work request" target="_blank" onClick={resetNav}>Contact</a>
+            </div>
+            {openNav ?
+                <MdClose size="32" className="sm:hidden text-white absolute right-0 m-1 mr-[20px]" onClick={() => setOpenNav(!openNav)} />
+                :
+                <MdMenu size="32" className="sm:hidden text-white absolute right-0 m-1 mr-[20px]" onClick={() => setOpenNav(!openNav)} />
             }
-            {width <= 640 &&
-                <div>
-                    <MdMenu size="32" className="text-white"></MdMenu>
-
-                </div>
-            }
+            {/* https://www.youtube.com/watch?v=74ys-dT94mA */}
         </div>
     )
 }

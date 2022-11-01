@@ -120,10 +120,12 @@ function Home() {
 
 
             {/* section 2 */}
-            <MyServices />
+            <div id="services" className="pt-[50px] mt-[50px]">
+                <MyServices />
+            </div>
 
             {/* section 3 */}
-            <div id="skills" className="pt-[100px]">
+            <div id="skills" className="pt-[50px] mt-[50px]">
                 <div className="text-white text-32 font-bold">
                     My Skills
                 </div>
@@ -148,7 +150,7 @@ function Home() {
 
 
             {/* Section 4 */}
-            <div id="work">
+            <div id="work" className="pt-[50px] mt-[50px]">
                 <MyProjects />
             </div>
 

@@ -2,8 +2,7 @@ import Email from '../assets/email.svg';
 import Whatsapp from '../assets/whatsapp.svg';
 import Github from '../assets/github.svg';
 import Linkedin from '../assets/linkedin.svg';
-import { MdMonitor, MdOutlineAod, MdOutlineFileDownload } from "react-icons/md";
-import { BiCodeBlock } from "react-icons/bi";
+import { MdOutlineFileDownload } from "react-icons/md";
 import useWindowDimensions from '../hooks/useWindowDimensions';
 import profil from '../assets/profil-pict.png';
 import tailwind from '../assets/tailwind-logo.svg';
@@ -70,7 +69,7 @@ function Home() {
                             I'm a Computer Science student in BINUS University Indonesia. I have been working on school and independent project as a UI/UX designer and front-end developer for one year. Currently I'm looking forward to gain experiences from collaborating with you!
                         </div>
                         <div className="flex font-normal gap-[32px] xl:gap-[40px] mt-6">
-                            <a href="mailto:william28.office@gmail.com?subject=Work request">
+                            <a href="mailto:william28.office@gmail.com?subject=Work request" rel="noreferrer">
                                 <div className="flex gap-2 items-center">
                                     <img src={Email} alt="email" />
                                     {width > 1024 &&
@@ -79,7 +78,7 @@ function Home() {
                                         </div>}
                                 </div>
                             </a>
-                            <a href="https://wa.me/6282177150569?text=Hello I'd would like to ask something" target="_blank">
+                            <a href="https://wa.me/6282177150569?text=Hello I'd would like to ask something" rel="noreferrer" target="_blank">
                                 <div className="flex gap-2 items-center">
                                     <img src={Whatsapp} alt="whatsapp" />
                                     {width > 1024 &&
@@ -88,7 +87,7 @@ function Home() {
                                         </div>}
                                 </div>
                             </a>
-                            <a href="https://github.com/William2809" target="_blank">
+                            <a href="https://github.com/William2809" target="_blank" rel="noreferrer">
                                 <div className="flex gap-2 items-center">
                                     <img src={Github} alt="github" />
                                     {width > 1024 &&
@@ -97,7 +96,7 @@ function Home() {
                                         </div>}
                                 </div>
                             </a>
-                            <a href="https://www.linkedin.com/in/william-huang-4011251b1/" target="_blank">
+                            <a href="https://www.linkedin.com/in/william-huang-4011251b1/" target="_blank" rel="noreferrer">
                                 <div className="flex gap-2 items-center">
                                     <img src={Linkedin} alt="linkedin" />
                                     {width > 1024 &&
@@ -108,12 +107,12 @@ function Home() {
                             </a>
                         </div>
                         {/* CV not available yet */}
-                        {/* <div className="flex gap-2 mt-6">
+                        <div className="flex gap-2 mt-6">
                             <MdOutlineFileDownload size="24" className="text-white"></MdOutlineFileDownload>
-                            <div className="underline text-white">
+                            <a className="underline text-white" href="https://drive.google.com/file/d/157zgEVJtS33PLsP2ylSmkSVvhJdw9uMv/view?usp=share_link" target="_blank" rel="noreferrer">
                                 Download CV
-                            </div>
-                        </div> */}
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -17,15 +17,6 @@ function Navbar({ children }: any) {
         setOpenNav(false);
     }
 
-    // useEffect(() => {
-    //   if(width >= 640 && openNav){
-
-    //   }
-    //   return () => {
-
-    //   }
-    // }, [width])
-
     if (width >= 640 && openNav) {
         resetNav();
     }
@@ -47,7 +38,6 @@ function Navbar({ children }: any) {
                 :
                 <MdMenu size="32" className="sm:hidden text-white absolute right-0 m-1 mr-[20px]" onClick={() => setOpenNav(!openNav)} />
             }
-            {/* https://www.youtube.com/watch?v=74ys-dT94mA */}
         </div>
     )
 }
